@@ -1,0 +1,11 @@
+# Domain configuration for the novelty engine
+# For each domain name specify one of the following modes:
+#   full         – apply linter with syntactic and rhythm patterns
+#   rhythm_only  – only apply rhythm adjustments; no syntactic rephrasing
+#   off          – disable linter and rewriting entirely
+
+general: full
+creative: full
+medical: off
+legal: off
+technical: rhythm_only
