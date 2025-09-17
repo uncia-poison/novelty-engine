@@ -1,0 +1,45 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Rewrite Plan",
+  "type": "object",
+  "required": ["mode"],
+  "properties": {
+    "mode": {
+      "type": "string",
+      "enum": ["none", "micro", "surgical"]
+    },
+    "locks": {
+      "type": "object",
+      "additionalProperties": {"type": "boolean"}
+    },
+    "remove": {
+      "type": "array",
+      "items": {"type": "string"}
+    },
+    "inject": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["type", "pattern"],
+        "properties": {
+          "type": {"type": "string"},
+          "pattern": {}
+        }
+      }
+    },
+    "max_edit_ratio": {
+      "type": "number",
+      "minimum": 0.0,
+      "maximum": 1.0
+    },
+    "style_constraints": {
+      "type": "object",
+      "properties": {
+        "voice_weight": {"type": "number"},
+        "temperature_cap": {"type": "number"}
+      },
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": false
+}
