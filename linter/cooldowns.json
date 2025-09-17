@@ -1,0 +1,13 @@
+{
+  "lex": {
+    "in conclusion": 6,
+    "basically": 8
+  },
+  "syn": {
+    "short_short_long": 4,
+    "dash_parenthesis": 3
+  },
+  "rhythm": {
+    "short-short-long": 2
+  }
+}
